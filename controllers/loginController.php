@@ -11,7 +11,7 @@ $usuario = $controller->consultarUsuario("Email = '$email'");
 
 if(count($usuario) != 1){
 
-    echo "La consulta arroja un numero erróneo de usuarios";
+    echo "El usuario o la contraseña son incorrectos";
 
 }else{
 

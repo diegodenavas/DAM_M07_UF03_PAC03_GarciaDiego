@@ -1,0 +1,77 @@
+.noticia{
+    margin: 0% auto 5% auto;
+    padding: 3% 5% 3% 3%;
+    box-shadow: black 0px 0px 3px;
+    background-color: white;
+    border-left: purple 10px solid;
+    transition: ease-in-out 0.5s;
+}
+
+.noticia:hover{
+    border-left: rgb(201, 60, 79) 10px solid;
+    cursor: pointer;
+    background-color: rgb(255, 245, 224);
+}
+
+.titulo, .contenido, .autor, .fecha{
+    margin: 1% 0;
+}
+
+.titulo{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2em;}
+
+.autor, .fecha{
+    font-style: italic;
+}
+
+.autor, .fecha{
+    width: 200px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.8em;
+    color: rgb(97, 97, 97);
+}
+
+.iconoFecha{
+    margin-right: 3%;
+}
+
+.iconoPass{
+    margin-right: 5%;
+}
+
+.contenedorAutor_Fecha{
+    display: flex;
+    justify-content: space-between;
+}
+
+#contenedorFlex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#contenedorIconos{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#contenedorIconos>a{
+    padding: 0% 25%;
+}
+
+.iconoLike{
+    margin-right: 5px;
+}
+
+
+/*----Medias Queries----*/
+
+@media(max-width: 720px){
+
+    .autor, .fecha{
+        font-size: 0.7em;
+    }
+
+}

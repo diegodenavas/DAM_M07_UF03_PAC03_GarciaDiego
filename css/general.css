@@ -1,0 +1,174 @@
+html{
+    background: rgb(9,130,11);
+    background: linear-gradient(180deg, rgb(194, 197, 216) 0%, rgb(100, 102, 194) 100%);
+}
+
+body{
+    width: 70%;
+    margin: 5% auto;
+    box-shadow: black 0px 0px 10px;
+    background-color: rgb(230, 230, 230);
+}
+
+header {
+    height: 400px;
+    width: 100%;
+    background-image: url("../imagenes/fondoCabecera.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 3px 3px black;
+    color: white;
+}
+
+#tituloCabecera{
+    padding: 10% 15% 1% 15%;
+    font-size: 4vw;
+}
+
+#subtituloCabecera{
+    padding: 0% 15% 1% 15%;
+    font-size: 3vw;
+}
+
+#nombreHeader{
+    color: rgb(255, 94, 0);
+    text-shadow: 2px 2px black;
+    font-size: 1.5vw;
+    padding: 0% 15% 1% 15%;
+}
+
+#menu{
+    border-top: purple 3px solid;
+    border-bottom: purple 3px solid;
+    background-color: wheat;
+    background: linear-gradient(180deg, rgb(243, 227, 198) 0%,rgb(247, 210, 141) 100%);
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#listaMenu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2% 5%;
+}
+
+.elementosMenu{
+    border-right: black 3px solid;
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.elementosMenu:last-child{
+    border: none;
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+    color: black;
+}
+
+section{
+    padding: 5%;
+}
+
+footer{
+    margin-top: 10%;
+    text-align: center;
+    padding: 5% 5%;
+    background-color: rgb(42, 45, 59);
+    color: white;
+}
+
+.iconosEditar{
+    transition: ease-in-out 0.3s;
+}
+
+.iconosEditar:hover{
+    color: rgb(172, 162, 23);
+}
+
+/*----Tablas----*/
+
+table{
+    width: 100%;
+    text-align: center;
+}
+
+th{
+    padding: 3% 0px;
+    background-color: rgb(245, 173, 173);
+    border-top: black 1px solid;
+}
+
+td {
+    border: black 1px solid;
+    border-left: none;
+    border-right: none;
+}
+
+tr:nth-child(odd){
+    background-color: rgb(161, 197, 250);
+}
+
+td{
+    padding: 3% 0px;
+}
+
+
+/*----Medias Queries----*/
+
+@media(max-width: 1200px){
+    header{
+        height: 300px;
+    }
+}
+
+@media(max-width: 920px){
+
+    html{
+        background: rgb(42, 45, 59);
+    }
+
+    body{
+        width: 100%;
+        margin: 0%;
+        box-shadow: none;
+    }
+
+    header{
+        height: 200px;
+    }
+
+    #tituloCabecera{
+        padding-top: 60px;
+    }
+
+}
+
+@media(max-width: 720px){
+
+    #tituloCabecera{
+        font-size: 1.4em;
+        text-shadow: 2px 2px black;
+    }
+    
+    #subtituloCabecera{
+        font-size: 1em;
+        text-shadow: 1.5px 1.5px black;
+    }
+    
+    #nombreHeader{
+        font-size: 0.8em;
+        text-shadow: 1px 1px black;
+    }
+
+    #menu{
+        font-family: initial;
+        font-size: 0.8em;
+    }
+
+}

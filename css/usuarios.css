@@ -1,0 +1,15 @@
+.casillasIconos{
+    padding: 0% 1%;
+}
+
+@media(max-width: 1200px){
+    .ocultarCasilla{
+        display: none;
+    }
+}
+
+@media(max-width: 920px){
+    .ocultarCasilla2{
+        display: none;
+    }
+}

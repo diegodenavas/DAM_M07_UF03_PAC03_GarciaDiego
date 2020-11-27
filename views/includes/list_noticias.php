@@ -21,10 +21,10 @@ else require_once("../models/funciones_bd.php");
 
                         if(isset($_SESSION["usuario"])){
                             echo
-                            "<div>
-                            <a href='form_noticia.php?id=$id'><i class='fas fa-pencil-alt'></i></a>
-                            <a href='../controllers/eliminarNoticia.php?id=$id'><i class='fas fa-trash-alt'></i></a>
-                        </div>";
+                            "<div id='contenedorIconos'>
+                                <a href='form_noticia.php?id=$id' class='iconosEditar'><i class='fas fa-pencil-alt'></i></a>
+                                <a href='../controllers/eliminarNoticia.php?id=$id' class='iconosEditar'><i class='fas fa-trash-alt'></i></a>
+                            </div>";
                         }
                     
                     echo
@@ -36,9 +36,9 @@ else require_once("../models/funciones_bd.php");
                     <p class='contenido'>" . $noticia[2] . "</p>";
                     
                     if(!isset($_COOKIE["like".$id]) || $_COOKIE["like".$id] == "0"){
-                        echo "<a href='../controllers/likeController?id=$id'><i class='fas fa-thumbs-up'></i></a>".$noticia[5];
+                        echo "<a href='../controllers/likeController?id=$id' class='iconoLike'><i class='fas fa-thumbs-up'></i></a>".$noticia[5];
                     }else{
-                        echo "<a href='../controllers/likeController?id=$id'><i class='fas fa-thumbs-up' style='color: rgb(0, 51, 204)'></i></a>".$noticia[5];
+                        echo "<a href='../controllers/likeController?id=$id' class='iconoLike'><i class='fas fa-thumbs-up' style='color: rgb(0, 51, 204)'></i></a>".$noticia[5];
                     }
 
                 echo
@@ -67,9 +67,17 @@ else require_once("../models/funciones_bd.php");
                     <td>" . $noticia[1] . "</td>";
 
                     if(isset($_SESSION["usuario"])){
-                        echo
-                        "<td><a href='form_usuario.php?id=$id'><i class='fas fa-pencil-alt'></i></a></td>
-                        <td><a href='../controllers/eliminarUsuario.php?id=" . $noticia[0] . "'><i class='fas fa-trash-alt'></i></a></td>";
+
+                        if(basename($_SERVER["PHP_SELF"]) != "index.php"){
+                            echo
+                            "<td><a href='form_noticias.php?id=$id'><i class='fas fa-pencil-alt'></i></a></td>
+                            <td><a href='../controllers/eliminarNoticia.php?id=" . $noticia[0] . "'><i class='fas fa-trash-alt'></i></a></td>";
+                        }else{
+                            echo
+                            "<td><a href='views/form_noticia.php?id=$id'><i class='fas fa-pencil-alt'></i></a></td>
+                            <td><a href='controllers/eliminarNoticia.php?id=" . $noticia[0] . "'><i class='fas fa-trash-alt'></i></a></td>";
+                        }
+                        
                     }
                     
                 echo

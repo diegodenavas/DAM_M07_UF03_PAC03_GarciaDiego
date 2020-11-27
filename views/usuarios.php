@@ -6,14 +6,22 @@
     <title>Usuarios</title>
 
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/usuarios.css">
 
     <script src="https://kit.fontawesome.com/7ef58eec5b.js" crossorigin="anonymous"></script>
 
     <?php session_start(); ?>
 </head>
 <body>
-    <?php require("includes/cabecera.php"); ?>
-    <?php require("includes/list_usuarios.php") ?>
+    <?php 
+    require("includes/header.php");
+    require("includes/cabecera.php"); 
+    ?>
+    <section>
+        <?php require("includes/list_usuarios.php") ?>
+    </section>
+
+    <?php include("includes/footer.php"); ?>
 </body>
 </html>

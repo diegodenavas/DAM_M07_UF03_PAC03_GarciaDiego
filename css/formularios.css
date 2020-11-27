@@ -1,0 +1,74 @@
+#formLogin{
+    width: 300px;
+    margin: auto;
+    border: purple 3px solid;
+    box-shadow: black 0px 0px 3px;
+    padding: 15% 10%;
+    text-align: center;
+}
+
+.campoForm{
+    width: 80%;
+    margin: auto;
+    text-align: left;
+}
+
+input[type="text"]{
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+input[type="date"]{
+    display: block;
+    margin-bottom: 15px;
+}
+
+textarea{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+input[type="submit"]{
+    margin: auto;
+    width: 70px;
+    height: 30px;
+    margin-top: 15px;
+}
+
+#preguntaRegistro{
+    text-align: center;
+    margin-top: 55px;
+}
+
+#preguntaRegistro>a{
+    color: rgb(0, 0, 238);
+}
+
+
+/*----Medias Queries----*/
+
+@media(max-width: 1200px){
+
+    #formLogin{
+        width: 90%;
+        padding: 10% 0%;
+        box-shadow: none;
+    }
+
+    .campoForm{
+        width: 50%;
+    }
+
+}
+
+@media(max-width: 920px){
+
+    #formLogin{
+        width: 90%;
+        border: none;
+        padding: 0%;
+        box-shadow: none;
+    }
+
+}
