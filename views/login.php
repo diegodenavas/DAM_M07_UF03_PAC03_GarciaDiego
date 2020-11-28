@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../css/general.css">
     <link rel="stylesheet" href="../css/formularios.css">
 
+    <script src="../js/loginController.js"></script>
+
     <?php
     session_start();
     if(isset($_SESSION["usuario"])) header("Location: ../index.php");
@@ -24,14 +26,16 @@
         <form action="../controllers/loginController.php" method="POST" id='formLogin'>
             <div class="campoForm">
                 <label for="email" class="formLogin-element">Correo electrónico</label>
-                <input type="text" name="email" class="formLogin-element" maxlength="100" required>
+                <input type="text" name="email" class="formLogin-element" maxlength="100" required id="email">
             </div>
             <div class="campoForm">
                 <label for="pass" class="formLogin-element">Contraseña</label>
-                <input type="text" name="pass" class="formLogin-element" maxlength="30" required>
+                <input type="text" name="pass" class="formLogin-element" maxlength="30" required id="pass">
             </div>
 
             <input type="submit" value="Enviar" class="formLogin-element">
+
+            <p id="mensajeError"></p>
 
             <p id="preguntaRegistro">¿Aun no estás registrado?<br>
             Pincha <a href="form_usuario.php">aquí</a></p>

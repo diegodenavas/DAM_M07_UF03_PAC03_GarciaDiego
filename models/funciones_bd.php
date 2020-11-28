@@ -21,7 +21,9 @@ class Funciones_bd{
 
         $stmt = $this->conexion->prepare($consulta);
 
-        $stmt->execute($valores);
+        $resp = $stmt->execute($valores);
+        
+        return $resp;
 
     }
 
@@ -86,7 +88,9 @@ class Funciones_bd{
 
         var_dump($valores);
 
-        $stmt->execute($valores);
+        $resp = $stmt->execute($valores);
+
+        return $resp;
 
     }
 

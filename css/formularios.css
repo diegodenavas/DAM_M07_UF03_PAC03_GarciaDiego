@@ -1,4 +1,4 @@
-#formLogin{
+#formLogin, #formLogin2{
     width: 300px;
     margin: auto;
     border: purple 3px solid;
@@ -38,11 +38,17 @@ input[type="submit"]{
 
 #preguntaRegistro{
     text-align: center;
-    margin-top: 55px;
+    margin-top: 25px;
 }
 
 #preguntaRegistro>a{
     color: rgb(0, 0, 238);
+}
+
+#mensajeError, #mensajeError2{
+    height: 20px;
+    margin-top: 5%;
+    color: red;
 }
 
 

@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../css/general.css">
     <link rel="stylesheet" href="../css/formularios.css">
 
+    <script src="../js/registroController.js"></script>
+
     <?php 
     
     session_start(); 
@@ -32,7 +34,7 @@
     ?>
 
     <section>
-        <form action="<?php if(!isset($_GET["id"])) echo "../controllers/form_usuarioController.php"; else echo "../controllers/actualizar_usuarioController.php"; ?>" method="POST" id="formLogin">
+        <form action="<?php if(!isset($_GET["id"])) echo "../controllers/form_usuarioController.php"; else echo "../controllers/actualizar_usuarioController.php"; ?>" method="POST" id="formLogin2">
 
             <?php
             if(isset($_GET["id"])){
@@ -44,35 +46,35 @@
 
             <div class="campoForm">
                 <label for="nombre" class="formLogin-element">Nombre</label>
-                <input type="text" name="nombre" class="formLogin-element" maxlength="20" <?php if(isset($_GET["id"])) echo "value='".$usuario[0][1]."'"; ?> >
+                <input type="text" name="nombre" class="formLogin-element" maxlength="20" <?php if(isset($_GET["id"])) echo "value='".$usuario[0][1]."'"; ?> required>
             </div>
             <div class="campoForm">
                 <label for="pass" class="formLogin-element">Contraseña</label>
-                <input type="text" name="pass" class="formLogin-element" maxlength="30" <?php if(isset($_GET["id"])) echo "value='".$usuario[0][2]."'"; ?> >
+                <input type="text" name="pass" class="formLogin-element" maxlength="30" <?php if(isset($_GET["id"])) echo "value='".$usuario[0][2]."'"; ?> required>
             </div>
             <div class="campoForm">
                 <label for="email" class="formLogin-element">Correo electrónico</label>
-                <input type="text" name="email" class="formLogin-element" maxlength="100" <?php if(isset($_GET["id"])) echo "value='".$usuario[0][3]."'"; ?> >
+                <input type="text" name="email" class="formLogin-element" maxlength="100" <?php if(isset($_GET["id"])) echo "value='".$usuario[0][3]."'"; ?> required>
             </div>
             <div class="campoForm">
                 <label for="edad" class="formLogin-element">Edad</label>
-                <input type="text" name="edad" class="formLogin-element" <?php if(isset($_GET["id"])) echo "value='".$usuario[0][4]."'"; ?> >
+                <input type="text" name="edad" class="formLogin-element" <?php if(isset($_GET["id"])) echo "value='".$usuario[0][4]."'"; ?> required>
             </div>
             <div class="campoForm">
                 <label for="nacimiento" class="formLogin-element">Fecha nacimiento</label>
-                <input type="date" name="nacimiento" class="formLogin-element" <?php if(isset($_GET["id"])) echo "value='".$usuario[0][5]."'"; ?> >
+                <input type="date" name="nacimiento" class="formLogin-element" <?php if(isset($_GET["id"])) echo "value='".$usuario[0][5]."'"; ?> required>
             </div>
             <div class="campoForm">
                 <label for="direccion" class="formLogin-element">Dirección</label>
-                <input type="text" name="direccion" class="formLogin-element" maxlength="300" <?php if(isset($_GET["id"])) echo "value='".$usuario[0][6]."'"; ?> >
+                <input type="text" name="direccion" class="formLogin-element" maxlength="300" <?php if(isset($_GET["id"])) echo "value='".$usuario[0][6]."'"; ?> required>
             </div>
             <div class="campoForm">
                 <label for="cpostal" class="formLogin-element">Código postal</label>
-                <input type="text" name="cpostal" class="formLogin-element" maxlength="10" <?php if(isset($_GET["id"])) echo "value='".$usuario[0][7]."'"; ?> >
+                <input type="text" name="cpostal" class="formLogin-element" maxlength="10" <?php if(isset($_GET["id"])) echo "value='".$usuario[0][7]."'"; ?> required>
             </div>
             <div class="campoForm">
                 <label for="provincia" class="formLogin-element">Provincia</label>
-                <input type="text" name="provincia" class="formLogin-element" maxlength="30" <?php if(isset($_GET["id"])) echo "value='".$usuario[0][8]."'"; ?> >
+                <input type="text" name="provincia" class="formLogin-element" maxlength="30" <?php if(isset($_GET["id"])) echo "value='".$usuario[0][8]."'"; ?> required>
             </div>
             <div class="campoForm">
                 <label for="genero" class="formLogin-element">Género</label><br>
@@ -81,6 +83,8 @@
             </div>
 
                 <input type="submit" value="Enviar" class="formLogin-element">
+
+                <p id="mensajeError2"></p>
         </form>
     </section>
 

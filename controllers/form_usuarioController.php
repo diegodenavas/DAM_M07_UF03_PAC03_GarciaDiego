@@ -18,10 +18,10 @@ $controller = new Funciones_bd();
 
 $respuesta = $controller->insertarUsuario("usuarios", $arrayDatos);
 
-if(!$respuesta){
-    header("Location: ../views/usuarios.php");
-}else{
-    echo "No se ha podido registrar el usuario";
-}
+if($respuesta){
+    if(isset($_SESSION["usuario"])) echo "validado1";
+    else echo "validado2";
+}else echo "no validado";
+
 
 ?>

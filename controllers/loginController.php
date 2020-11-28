@@ -11,7 +11,7 @@ $usuario = $controller->consultarUsuario("Email = '$email'");
 
 if(count($usuario) != 1){
 
-    echo "El usuario o la contraseña son incorrectos";
+    echo "no validado 1";
 
 }else{
 
@@ -22,10 +22,11 @@ if(count($usuario) != 1){
         session_start();
 
         $_SESSION["usuario"] = $datosUsuario;
-        header("Location: ../index.php");
+
+        echo "validado";
+    }else{
+        echo "no validado 2";
     }
-    
-    else echo "Correo o contraseña incorrecta";
 }
 
 ?>
