@@ -1,0 +1,15 @@
+{
+    "name": "diego/dam_m07_uf03_pac03_garcia-diego",
+    "description": "Gestion de dependencias del proyecto",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "diego garcia",
+            "email": "diegodenavas@gmail.com"
+        }
+    ],
+    "require": {
+        "faapz/pdo": "2.1.0"
+    }
+}

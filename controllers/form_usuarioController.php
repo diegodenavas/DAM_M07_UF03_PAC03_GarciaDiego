@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 require("../models/funciones_bd.php");
 
 $nombre = $_POST["nombre"];
@@ -17,6 +19,8 @@ $arrayDatos = array($nombre, $pass, $email, $edad, $fechaNacimiento, $direccion,
 $controller = new Funciones_bd();
 
 $respuesta = $controller->insertarUsuario("usuarios", $arrayDatos);
+
+
 
 if($respuesta){
     if(isset($_SESSION["usuario"])) echo "validado1";

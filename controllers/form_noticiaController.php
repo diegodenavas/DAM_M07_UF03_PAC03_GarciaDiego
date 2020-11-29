@@ -13,10 +13,10 @@ $controller = new Funciones_bd();
 
 $respuesta = $controller->insertarNoticia("noticias", $arrayDatos);
 
-if(!$respuesta){
+if($respuesta){
     header("Location: ../views/noticias.php");
 }else{
-    echo "No se ha podido registrar el usuario";
+    echo "No se ha podido registrar la noticia";
 }
 
 ?>

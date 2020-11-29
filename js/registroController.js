@@ -34,7 +34,7 @@ window.onload = function(){
 
                 console.log(text);
 
-                if(text == "validado1") location.href= "/usuarios.php";
+                if(text == "validado1") location.href= "../views/usuarios.php";
                 else if(text == "validado2") location.href = "../index.php";
                 else {
 

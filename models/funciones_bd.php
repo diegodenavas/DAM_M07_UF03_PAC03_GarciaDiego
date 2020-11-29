@@ -17,7 +17,7 @@ class Funciones_bd{
 
     public function insertarNoticia($tabla, array $valores){
 
-        $consulta = "INSERT into $tabla(Titulo, Contenido, Autor, Hora_creacion, Likes) VALUES(?, ?, ?, CURDATE(), 0)";
+        $consulta = "INSERT into $tabla(Titulo, Contenido, Autor, Hora_creacion, Likes) VALUES(?, ?, ?, NOW(), 0)";
 
         $stmt = $this->conexion->prepare($consulta);
 
@@ -85,8 +85,6 @@ class Funciones_bd{
         $consulta = "INSERT into $tabla(nombre, contrasena, email, edad, fecha_nacimiento, direccion, codigo_postal, provincia, genero) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         $stmt = $this->conexion->prepare($consulta);
-
-        var_dump($valores);
 
         $resp = $stmt->execute($valores);
 
